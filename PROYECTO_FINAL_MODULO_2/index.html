@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta name="description" content="Explora cómo el ESP32 y IoT se integran en proyectos web y programación C++. Aprende a controlar dispositivos de forma remota." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> IoT, ESP32 y su aplicación con páginas web </title>
     <link rel="shortcut icon" href="./img/ICON.svg">
@@ -13,8 +13,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
-
-
 </head>
 
 <body>
@@ -41,8 +39,12 @@
         <h2>ESP32 y la tecnología IoT</h2>
     </header>
 
-
-    <h2> ¿Qué es la tecnología IoT? </h2>
+    <div class="IMAGE_CONTAINER">
+        <img src="./img/IMAGE_2.jpg" alt="Decoracion" class="CENTER_IMAGE" width="1000px">
+    </div>
+    
+    <div class="TEXT">
+    <h2  class="TAB"> ¿Qué es la tecnología IoT? </h2>
 
     <P>
         El Internet de las Cosas (IoT, por sus siglas en inglés) es una red de dispositivos físicos conectados entre sí
@@ -76,9 +78,11 @@
             de tareas y procesos.
         </li>
     </ul>
-    Algunas de las aplicaciones más destacables son: Hogares inteligentes, salud, industria, transporte y logistica,
-    entre otros. El IoT tiene el potencial de transformar muchos aspectos de nuestra vida diaria, haciéndolos más
-    eficientes, seguros y convenientes.
+        <p>
+            Algunas de las aplicaciones más destacables son: Hogares inteligentes, salud, industria, transporte y logistica,
+            entre otros. El IoT tiene el potencial de transformar muchos aspectos de nuestra vida diaria, haciéndolos más
+            eficientes, seguros y convenientes.
+        </p>
     </p>
 
     <h2> Conociendo el ESP32 </h2>
@@ -87,6 +91,10 @@
         El ESP32 es un microcontrolador avanzado desarrollado por Espressif Systems. Es ampliamente utilizado en
         proyectos de IoT debido a su versatilidad, bajo costo y potencia. Las siguientes son un resumen de sus
         características más destacadas:
+
+        <div class="IMAGE_CONTAINER">
+            <img src="./img/IMAGE_3.PNG" alt="Decoracion" class="CENTER_IMAGE" width="500px">
+        </div>
     <ul>
         <li>
             <strong> Procesador: </strong> Doble núcleo (dual-core) Tensilica Xtensa LX6, con una frecuencia de hasta
@@ -112,12 +120,50 @@
             lo que lo hace ideal para aplicaciones de bajo consumo.
         </li>
     </ul>
-    El ESP32 es un componente fundamental en el desarrollo de dispositivos conectados debido a su capacidad de
-    procesamiento, conectividad y flexibilidad. Esto lo convierte en una excelente opción para proyectos educativos y
-    profesionales en el ámbito del IoT.
+        <p>
+            El ESP32 es un componente fundamental en el desarrollo de dispositivos conectados debido a su capacidad de
+            procesamiento, conectividad y flexibilidad. Esto lo convierte en una excelente opción para proyectos educativos y
+            profesionales en el ámbito del IoT.
+        </p>
     </p>
 
     <h3> Comparación con otros microcontroladores populares </h3>
+    <div class="MICROCONTROLER_CONTAINER">
+        <div class="MICROCONTROLER_CARD">
+            <img src="./img/ESP32.jpg" alt="ESP32">
+            <div class="MICROCONTROLER_INFO">
+                <h4> ESP32 </h4>
+                <p>
+                    Ventajas: Wi-Fi y Bluetooth integrados, excelente rendimiento en IoT y control remoto.
+                    <br> Características: Microcontrolador dual-core, 520 KB SRAM, conectividad inalámbrica, soporte para sensores y periféricos.
+                    <br> Precio: $5-$15 USD.
+                </p>
+            </div>
+        </div>
+        <div class="MICROCONTROLER_CARD">
+            <img src="./img/RASPBERRY.jpg" alt="RASPBERRY">
+            <div class="MICROCONTROLER_INFO">
+                <h4> Raspberry </h4>
+                <p>
+                    Ventajas: Potencia de procesamiento, ejecuta sistemas operativos completos (Linux).
+                    <br>Características: Procesador ARM, GPIO, USB, HDMI, Ethernet, ideal para proyectos avanzados y computación.
+                    <br> Precio: $35-$100 USD (según el modelo).
+                </p>
+            </div>
+        </div>
+        <div class="MICROCONTROLER_CARD">
+            <img src="./img/NANO.jpg" alt="NANO">
+            <div class="MICROCONTROLER_INFO">
+                <h4> Arduino Nano </h4>
+                <p>
+                    Ventajas: Simplicidad, bajo consumo de energía, ideal para proyectos básicos.
+                    <br> Características: Microcontrolador ATmega328P, 32 KB de memoria Flash, 14 pines digitales, 6 analógicos.
+                    <br> Precio: $10-$20 USD.
+                </p>
+            </div>
+        </div>
+    </div>
+    
     <p>
         El ESP32 a diferencia de otros microcontroladores (como Arduino, raspberry, entre otros), suele ser una
         excelente opción para implementar su uso con IoT. El ESP32 cuenta con conectividad a WiFi y Bluetooth sin
@@ -134,13 +180,15 @@
         necesidades.
         <br>
         Una vez instalado el programa, su interfaz debería verse más o menos de esta manera:
-        <!-- Insertar imagen -->
-        <br>
+        <div class="IMAGE_CONTAINER">
+            <img src="./img/ARD_IDE_1.png" alt="Demostracion" class="CENTER_IMAGE" width="1000px">
+        </div>
         Para poder cargar codigo en el microcontrolador código necesitaremos agregar la placa al entorno de desarrollo,
         para eso, en la barra lateral izquierda seleccionamos la opcion "Gestor de placas" y en buscar colocamos "ESP32"
         y descargamos el siguiente:
-        <!-- Insertar imagen -->
-
+        <div class="IMAGE_CONTAINER">
+            <img src="./img/ARD_IDE_2.png" alt="Demostracion" class="CENTER_IMAGE" width="500px">
+        </div>
     </p>
 
     <h3> Empezar a programar </h3>
@@ -148,7 +196,7 @@
         Habiendo realizado los pasos anteriores, podemos empezar a subir código en la placa, probemos lo siguiente:
 
     <div class="CODE_CONTAINER">
-        <button class="copy-btn" onclick="copyCode(this)">Copiar código</button>
+        <button class="COPY_BUTT" onclick="copyCode(this)">Copiar código</button>
        <pre><code class="language-c">
         #define LED 2 // La placa tiene un led por defecto en el pin 2
                 
@@ -165,12 +213,16 @@
             </code></pre>
     </div>
 
-    Para subir codigo, seleccionamos la pestaña de la barra superior "Seleccionar Placa y Puerto", en "Buscar placa"
-    escribimos "ESP32-WROOM-DA-Module" en puertos, hacemos clic en el que termine con "(USB)", le damos en aceptar y
-    subimos el código con el boton de "Cargar", ubicada en la misma barra de acciones.
-    <!-- Insertar imagen -->
-    Nota: En caso de que no aparezca el puerto USB, será necesario instalar un driver adicional a la computadora. El
-    nombre del driver es "Silicon labs CP210x USB to UART Bridge".
+        <p>
+            Para subir codigo, seleccionamos la pestaña de la barra superior "Seleccionar Placa y Puerto", en "Buscar placa"
+            escribimos "ESP32-WROOM-DA-Module" en puertos, hacemos clic en el que termine con "(USB)", le damos en aceptar y
+            subimos el código con el boton de "Cargar", ubicada en la misma barra de acciones. <br>
+            <div class="IMAGE_CONTAINER">
+                <img src="./img/ARD_IDE_3.png" alt="Demostracion" class="CENTER_IMAGE" width="1000px">
+            </div>
+            Nota: En caso de que no aparezca el puerto USB, será necesario instalar un driver adicional a la computadora. El
+            nombre del driver es "Silicon labs CP210x USB to UART Bridge".
+        </p>
     </p>
 
     <h3> Conectando el ESP32 al internet </h3>
@@ -182,194 +234,199 @@
         <!-- Insertar imagen -->
         Ahora bien, el código sería de la siuiente manera:
 
-        <div class="CODE_CONTAINER_2">
-        <button class="copy-btn" onclick="copyCode(this)">Copiar código</button>
+        <div class="CODE_CONTAINER">
+        <button class="COPY_BUTT" onclick="copyCode(this)">Copiar código</button>
         <pre><code class="language-c">
-            # include &lt;WiFi.h&gt; // Incluimos el uso de la librería en nuestro codigo
-            WiFiServer server(80); // Habilitamos el puerto 
+        # include &lt;WiFi.h&gt; // Incluimos el uso de la librería en nuestro codigo
+        WiFiServer server(80); // Habilitamos el puerto 
         
-            const *char SSID = "NOM" // Reemplazamos "NOM" por el nombre de nuestra red WiFi
-            const *char PASSWORD = "CONT" // Reemplazamos "CONT" por la contraseña de nuestra red WiFi
+        const *char SSID = "NOM" // Reemplazamos "NOM" por el nombre de nuestra red WiFi
+        const *char PASSWORD = "CONT" // Reemplazamos "CONT" por la contraseña de nuestra red WiFi
         
-            void setup () {
-                Serial.begin (9600); // Habilitamos la comunicación serial
-                WiFi.begin (SSID, PASSWORD); // Nos conectamos a la red WiFi
+        void setup () {
+            Serial.begin (9600); // Habilitamos la comunicación serial
+            WiFi.begin (SSID, PASSWORD); // Nos conectamos a la red WiFi
                 
-                Serial.println (); // Salto de linea 
+            Serial.println (); // Salto de linea 
         
-                Serial.print ("Estableciondo conexión con: "); // Impresiones en el monitor serie
-                Serial.print (SSID);
+            Serial.print ("Estableciondo conexión con: "); // Impresiones en el monitor serie
+            Serial.print (SSID);
         
-                while (WiFi.status() != WL_CONNECTED) {
-                delay(500);
-                Serial.printlnv ("CONECTANDO A RED WIFI...");
-                }
-        
-                Serial.println ("CONEXION EXITOSA");
-                Serial.println ();
-        
-                Serial.print ("IP ADRESS:   ");
-                Serial.println (WiFi.localIP()); // Dirección IP que toma la placa en la red
-                
-                server.begin ();
+            while (WiFi.status() != WL_CONNECTED) {
+            delay(500);
+            Serial.printlnv ("CONECTANDO A RED WIFI...");
             }
         
-            void loop () {
-                WiFiClient client = server.available();
-                if (client) {
-                    Serial.println("CLIENTE CONECTADO");
-                    delay (10);
-                    client.stop ();
-                }
+            Serial.println ("CONEXION EXITOSA");
+            Serial.println ();
+        
+            Serial.print ("IP ADRESS:   ");
+            Serial.println (WiFi.localIP()); // Dirección IP que toma la placa en la red
+                
+            server.begin ();
+        }
+        
+        void loop () {
+            WiFiClient client = server.available();
+            if (client) {
+                Serial.println("CLIENTE CONECTADO");
+                delay (10);
+                client.stop ();
             }
-                </code></pre>
-        </div>
-
-    De esta manera ya tenemos conectado la placa a internet, y para ver las impresiones seriales que hace la placa, nos
-    dirigimos a la esquita superor derecha y seleccionamos "Monitor Serie", pero... ¿Como podemos empezar a monitorear
-    nuestros dispositivos?.
-    Si bien, existen una gran cantidad de librerias que nos permiten realizar estos trabajos, haremos este trabajo desde
-    cero con HTML.
+        }
+            </code></pre>
+    </div>
+        <p>
+            De esta manera ya tenemos conectado la placa a internet, y para ver las impresiones seriales que hace la placa, nos
+            dirigimos a la esquita superor derecha y seleccionamos "Monitor Serie", pero... ¿Como podemos empezar a monitorear
+            nuestros dispositivos?.
+            Si bien, existen una gran cantidad de librerias que nos permiten realizar estos trabajos, haremos este trabajo desde
+            cero con HTML.
+        </p>
     </p>
 
     <h3> Controlando un LED con el teclado a travéz de una pagina web </h3>
     <p>
         Reutilizaremos el código anterior, agregando unas cuantas cosas mas.
 
-    <pre><code>
-            # include &lt;WiFi.h&gt;
-            WiFiServer server(80);
+        <div class="CODE_CONTAINER">
+        <button class="COPY_BUTT" onclick="copyCode(this)">Copiar código</button>
+        <pre><code class="language-c">
+        # include &lt;WiFi.h&gt;
+        WiFiServer server(80);
                 
-            const char* SSID = "NOM";
-            const char* PASSWORD = "CONT";
+        const char* SSID = "NOM";
+        const char* PASSWORD = "CONT";
                 
-            # define LEDPIN 2
+        # define LEDPIN 2
                 
-            void setup () {
-                Serial.begin (9600);
-                delay (10);
-                pinMode (LEDPIN, OUTPUT);
+        void setup () {
+            Serial.begin (9600);
+            delay (10);
+            pinMode (LEDPIN, OUTPUT);
                 
-                WiFi.begin (SSID, PASSWORD);
+            WiFi.begin (SSID, PASSWORD);
                 
-                Serial.println ();
-                Serial.println ();
+            Serial.println ();
+            Serial.println ();
                 
-                Serial.print("ESTABLECIENDO CONEXION CON:    ");
-                Serial.println(SSID);
+            Serial.print("ESTABLECIENDO CONEXION CON:    ");
+            Serial.println(SSID);
                 
-                while (WiFi.status() != WL_CONNECTED) {
-                    delay(1000);
-                    Serial.println("CONECTANDO A RED WIFI...");
-                }
-                
-                Serial.println("CONEXION EXITOSA");
-                Serial.println();
-                Serial.print("IP ADRESS:   ");
-                Serial.println(WiFi.localIP()); // IMPORTANTE GUARDAR ESTE DATO
-                
-                server.begin();
+            while (WiFi.status() != WL_CONNECTED) {
+                delay(1000);
+                Serial.println("CONECTANDO A RED WIFI...");
             }
                 
-            void loop () {
-                WiFiClient client = server.available();
-                if (client) {
-                    Serial.println("CLIENTE CONECTADO");
-                    String request = client.readStringUntil('\r');
-                    client.flush();
+            Serial.println("CONEXION EXITOSA");
+            Serial.println();
+            Serial.print("IP ADRESS:   ");
+            Serial.println(WiFi.localIP()); // IMPORTANTE GUARDAR ESTE DATO
                 
-                    if (request.indexOf ("/ENCENDER_LED") != -1) {
-                      digitalWrite (LEDPIN, HIGH);
-                      delay (10);
-                    }
-                    if (request.indexOf ("/APAGAR_LED") != -1) {
-                      digitalWrite (LEDPIN, LOW);
-                      delay (10);
-                    }
+            server.begin();
+        }
                 
-                    String html = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n";
+        void loop () {
+            WiFiClient client = server.available();
+            if (client) {
+                Serial.println("CLIENTE CONECTADO");
+                String request = client.readStringUntil('\r');
+                client.flush();
                 
-                    client.print (html);
+                if (request.indexOf ("/ENCENDER_LED") != -1) {
+                    digitalWrite (LEDPIN, HIGH);
                     delay (10);
-                    client.stop ();
                 }
+                if (request.indexOf ("/APAGAR_LED") != -1) {
+                    digitalWrite (LEDPIN, LOW);
+                    delay (10);
+                }
+                
+                String html = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n";
+                
+                client.print (html);
+                delay (10);
+                client.stop ();
             }
+        }
         </code></pre>
+    </div>
+        <p>
+            Con esta parte del código tenemos lista la placa, ahora solo falta la programación de la pagina web.
+        </p>
 
-    Con esta parte del código tenemos lista la placa PCB, ahora solo falta la programación de la pagina web.
-
-    <pre><code>
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-                &lt;head&gt;
-                    &lt;title&gt;
-                        CONTROL_LED
-                    &lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;h1&gt;
-                        CONTROL DE LED
-                    &lt;/h1&gt;
+        <div class="CODE_CONTAINER">
+        <button class="COPY_BUTT" onclick="copyCode(this)">Copiar código</button>
+        <pre><code class="language-c">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt; &lt;title&gt; CONTROL_LED &lt;/title&gt; &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt; CONTROL DE LED &lt;/h1&gt;
                     
-                    &lt;button id="BOTON_DE_ENCENDIDO"&gt; ENCENDER LED &lt;/button&gt;
-                    &lt;button id="BOTON_DE_APAGADO"&gt; APAGAR LED &lt;/button&gt;
+            &lt;button id="BOTON_DE_ENCENDIDO"&gt; ENCENDER LED &lt;/button&gt;
+            &lt;button id="BOTON_DE_APAGADO"&gt; APAGAR LED &lt;/button&gt;
             
-                    &lt;script&gt;
-                        let ISKEYPRESED = false;
+            &lt;script&gt;
+                let ISKEYPRESED = false;
             
-                        function EncenderLed () {
-                            fetch ('http://192.168.0.25/ENCENDER_LED')      //"ENCENDER_LED" es la variable que lee el ESP32 para prender el led
-                                .then (response =&gt; console.log ('LED ENCENDIDO'))
-                                .catch (error =&gt; console.error ('Error:', error));
+                function EncenderLed () {
+                    fetch ('http://192.168.0.25/ENCENDER_LED')      //"ENCENDER_LED" es la variable que lee el ESP32 para prender el led
+                        .then (response =&gt; console.log ('LED ENCENDIDO'))
+                        .catch (error =&gt; console.error ('Error:', error));
+                }
+                function ApagarLed() {
+                    fetch('http://192.168.0.25/APAGAR_LED')     //En "DIRECCION_IP" agregas el ip proporcionado en el codigo C++
+                        .then(response =&gt; console.log('LED APAGADO'))
+                        .catch(error =&gt; console.error('Error:', error));
+                    }
+            
+                //Con esta funcion el led se prende por tiempo indefinido hasta presionar la tecla w
+                document.addEventListener ('keydown', function (event) {
+                    if (event.key === 'q' || event.key === 'Q') {
+                        EncenderLed ();
+                        event.preventDefault ();
+                    }
+                    else if (event.key === 'w' || event.key === 'W') {
+                        ApagarLed ();
+                        event.preventDefault ();
+                    }
+                }); 
+            
+                //Con esta funcion el led se prende mientras este presionada la tecla E
+                document.addEventListener ('keydown', function (event) {
+                    if (event.key === 'e' || event.key === 'E') {
+                        if (!ISKEYPRESED) {
+                            EncenderLed ();
+                            ISKEYPRESED = true;
                         }
-                        function ApagarLed() {
-                            fetch('http://192.168.0.25/APAGAR_LED')     //En "DIRECCION_IP" agregas el ip proporcionado en el codigo C++
-                                .then(response =&gt; console.log('LED APAGADO'))
-                                .catch(error =&gt; console.error('Error:', error));
-                        }
-            
-                        //Con esta funcion el led se prende por tiempo indefinido hasta presionar la tecla w
-                        document.addEventListener ('keydown', function (event) {
-                            if (event.key === 'q' || event.key === 'Q') {
-                                EncenderLed ();
-                                event.preventDefault ();
-                            }
-                            else if (event.key === 'w' || event.key === 'W') {
-                                ApagarLed ();
-                                event.preventDefault ();
-                            }
-                        }); 
-            
-                        //Con esta funcion el led se prende mientras este presionada la tecla E
-                        document.addEventListener ('keydown', function (event) {
-                            if (event.key === 'e' || event.key === 'E') {
-                                if (!ISKEYPRESED) {
-                                    EncenderLed ();
-                                    ISKEYPRESED = true;
-                                }
-                            }
-                        });
+                    }
+                });
                         
-                        //En caso contrario, el led se apaga
-                        document.addEventListener('keyup', function (event) {
-                            if (event.key === 'e' || event.key === 'E') {
-                                ApagarLed ();
-                                ISKEYPRESED = false;
-                                event.preventDefault ();
-                            }
-                        });
+                //En caso contrario, el led se apaga
+                document.addEventListener('keyup', function (event) {
+                    if (event.key === 'e' || event.key === 'E') {
+                        ApagarLed ();
+                        ISKEYPRESED = false;
+                        event.preventDefault ();
+                    }
+                });
             
-                        //Se le da la propiedad de poder hacer clic en los botones previamente creados
-                        document.getElementById('BOTON_DE_ENCENDIDO').addEventListener('click', EncenderLed);
-                        document.getElementById('BOTON_DE_APAGADO').addEventListener('click', ApagarLed);
-                    &lt;/script&gt;
-                &lt;/body&gt;
-            &lt;/html&gt;
+                //Se le da la propiedad de poder hacer clic en los botones previamente creados
+                document.getElementById('BOTON_DE_ENCENDIDO').addEventListener('click', EncenderLed);
+                document.getElementById('BOTON_DE_APAGADO').addEventListener('click', ApagarLed);
+            &lt;/script&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
         </code></pre>
-    Aunque la página será bastante simple, podemos empezar a probar diversas posibilidades tanto en el ESP32 así como en
-    la página, desde candados electrónicos", luces automaticas, muestras visuales de los datos monitoreados, reigo de
-    plantas automatico, entre muchas más. El límite esta en tu imaginación.
+    </div>
+        <p>
+            Aunque la página será bastante simple, podemos empezar a probar diversas posibilidades tanto en el ESP32 así como en
+            la página, desde candados electrónicos", luces automaticas, muestras visuales de los datos monitoreados, reigo de
+            plantas automatico, entre muchas más. El límite esta en tu imaginación.
+        </p>
     </p>
+    </div>
+    <br><br><br><br><br>
 </body>
-
 </html>

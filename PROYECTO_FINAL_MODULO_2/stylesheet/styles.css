@@ -1,21 +1,16 @@
 /* Restablecer márgenes en el body */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     padding: 0;
-    padding-top: 0px; /* Da espacio a la parte superior para la barra */
+    line-height: 2;
+    background-color: #ffffff; /* Cambia el fondo a un gris claro */
 }
 
 /* Estilo del link */
 .HEAD_LINK {
     text-decoration: none;
-    color: white;
-    font-family: 'Great Vibes', cursive;
+    color: rgb(0, 0, 0);
+    font-family: 'Pacifico', cursive;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -43,7 +38,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    background-color: #18738f;
+    background-color: #8becbc;
     width: 100%;
     padding: 0 50px;
     /* Elimina position: fixed para que la barra se desplace con la página */
@@ -53,7 +48,7 @@ body {
 .NAVBAR {
     display: flex;
     margin-right: 100px;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Pacifico', cursive;
 }
 .NAVAR_STYLE {
     font-weight: bold; /* Hace el texto en negritas */
@@ -63,7 +58,7 @@ body {
     text-align: end; /* Centrado del texto */
 }
 .NAVBAR a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin-left: 80px; /* Espaciado entre los enlaces */
 }
@@ -75,7 +70,9 @@ body {
     right: 20px;  /* A 20px desde la parte derecha */
     width: 60px;  /* Tamaño del ícono circular */
     height: 60px; /* Tamaño del ícono circular */
-    background-color: #18738f; /* Fondo del ícono flotante */
+    background-color: #8becbc
+
+; /* Fondo del ícono flotante */
     border-radius: 50%;  /* Hacer el ícono redondo */
     display: flex;
     justify-content: center; /* Centrado horizontal */
@@ -92,13 +89,13 @@ body {
 
 /* Estilo del encabezado */
 .CONTENT_HEADER {
-    font-family: 'Great Vibes', cursive;
-    background-color: #18738f; /* Color de fondo (puedes cambiarlo por cualquier color que prefieras) */
+    font-family: 'Pacifico', cursive;
+    background-color: #8becbc; /* Color de fondo (puedes cambiarlo por cualquier color que prefieras) */
     padding: 14px;   /* Reduce el espaciado interno */
     text-align: center; /* Centra el texto dentro del header */
     font-size: 16px;  /* Tamaño de la fuente más pequeño */
     font-weight: bold; /* Hace el texto en negritas */
-    color: white;  /* Color del texto */
+    color: rgb(0, 0, 0);  /* Color del texto */
     position: sticky; /* Hace que el header se quede fijo al hacer scroll */
     top: 0; /* Se queda fijo en la parte superior */
     z-index: 50; /* Asegura que esté por encima de otros elementos */
@@ -132,7 +129,7 @@ body {
 }
 
 /* Estilo del botón de copiar */
-.copy-btn {
+.COPY_BUTT {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -146,13 +143,67 @@ body {
     transition: background 0.5s;
 }
 
-.copy-btn:hover {
+.COPY_BUTT:hover {
     background: #88c0d0; /* Fondo al pasar el cursor */
     color: #2e3440; /* Texto más oscuro */
 }
 
+.TEXT {
+    padding-left: 6em;
+    padding-right: 6em;
+    text-align: justify; 
+    font-family: 'Pacifico', cursive;
+    color: #000000; /* Color del texto */
+    font-size: 18px; 
+} 
 
+.IMAGE_CONTAINER {
+    margin-top: 40px; /* Ajusta el espacio superior según el tamaño de tu barra */
+    text-align: center; /* Centra la imagen horizontalmente */
+}
 
+.CENTER_IMAGE {
+    display: block; /* Asegura que la imagen esté centrada en su contenedor */
+    margin: 0 auto; /* Centrado horizontal adicional si es necesario */
+}
 
+.MICROCONTROLER_CONTAINER {
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinea las tarjetas al centro */
+}
 
+.MICROCONTROLER_CARD {
+    background-color: #8becbc;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%; /* Asegura que la tarjeta ocupe todo el ancho disponible */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Evita desbordamiento del contenido */
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen y el texto se apilen verticalmente */
+    align-items: stretch; /* Ajusta el contenido al tamaño del contenedor */
+    border: 2px solid #000000; /* Cambia el color del borde aquí (puedes usar el color que desees) */
+}
 
+.MICROCONTROLER_CARD img {
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: auto; /* Mantén las proporciones */
+    object-fit: cover; /* Ajusta cómo se recorta la imagen */
+    object-position: center; /* Centra el contenido de la imagen */
+}
+
+.MICROCONTROLER_INFO {
+    padding: 15px;
+    text-align: justify; /* Justifica el texto */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+}
+
+.MICROCONTROLER_INFO h4 {
+    color: rgb(13, 7, 104);
+    text-align: center; /* Centra el título dentro del contenedor */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
