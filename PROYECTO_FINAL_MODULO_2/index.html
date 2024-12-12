@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="./img/ICON.svg">
 </head>
 <body>
-    <h2> ¿Qué es IoT? </h2>
+    <h2> ¿Qué es la tecnología IoT? </h2>
     
     <P>
         El Internet de las Cosas (IoT, por sus siglas en inglés) es una red de dispositivos físicos conectados entre sí y a Internet, capaces de recopilar y compartir datos. Estos dispositivos pueden ser cualquier cosa, desde electrodomésticos inteligentes y dispositivos portátiles hasta sensores industriales y vehículos conectados. La idea principal es permitir que estos dispositivos se comuniquen y cooperen entre sí sin intervención humana directa.
@@ -37,6 +37,7 @@
     </p>
 
     <h2> Conociendo el ESP32 </h2>
+    <h3> ¿Qué es ESP32 exactamente? </h3>
     <p>
         El ESP32 es un microcontrolador avanzado desarrollado por Espressif Systems. Es ampliamente utilizado en proyectos de IoT debido a su versatilidad, bajo costo y potencia. Las siguientes son un resumen de sus características más destacadas:
         <ul>
@@ -56,9 +57,101 @@
                 <strong> Seguridad: </strong> Soporte para encriptación AES, RSA, SHA-2, y otros estándares de seguridad, así como un generador de números aleatorios y almacenamiento seguro.
             </li>
             <li>
-                <strong> Bajo consumo de energía: </strong> Modos de ahorro de energía, como el modo de suspensión profunda, lo que lo hace ideal para aplicaciones de bajo consumo
+                <strong> Bajo consumo de energía: </strong> Modos de ahorro de energía, como el modo de suspensión profunda, lo que lo hace ideal para aplicaciones de bajo consumo.
             </li>
         </ul>
+        El ESP32 es un componente fundamental en el desarrollo de dispositivos conectados debido a su capacidad de procesamiento, conectividad y flexibilidad. Esto lo convierte en una excelente opción para proyectos educativos y profesionales en el ámbito del IoT.
     </p>
+
+    <h3> Comparación con otros microcontroladores populares </h3>
+    <p>
+        El ESP32 a diferencia de otros microcontroladores (como Arduino, raspberry, entre otros), suele ser una excelente opción para implementar su uso con IoT. El ESP32 cuenta con conectividad a WiFi y Bluetooth sin necesidad de modulos externos, es mucho fácil de programar y generalmente tiene un costo más reducido,
+    </p>
+
+    <h2> Configuración del ESP32 </h2>
+    <h3> Instalación y configuración del entorno de programación </h3>
+    <p>
+        El ESP32 puede programarse de una gran variedad de formas y lenguajes, pero para este caso, utilizaremos la herramienta de Arduino IDE y el lenguaje C++. Es una plataforma diseñada principalmente para microcontroladores Arduino, pero se puede configurar para programar el ESP32.
+        Primero debemos dirigirnos a su pagina web y seguir los pasos para descargar el programa acorde a nuestras necesidades. 
+        <br>
+        Una vez instalado el programa, su interfaz debería verse más o menos de esta manera:
+        <!-- Insertar imagen -->
+        <br>
+        Para poder cargar codigo en el microcontrolador código necesitaremos agregar la placa al entorno de desarrollo, para eso, en la barra lateral izquierda seleccionamos la opcion "Gestor de placas" y en buscar colocamos "ESP32" y descargamos el siguiente:
+        <!-- Insertar imagen -->
+
+    </p>
+
+    <h3> Empezar a programar </h3>
+    <p>
+        Habiendo realizado los pasos anteriores, podemos empezar a subir código en la placa, probemos lo siguiente:
+
+        <p>
+            # define LED 2 // La placa tiene un led por defecto en el pin 2
+            
+            void setup () {
+                pinMode (LED, OUTPUT); // Declaramos el pin 2 como pin de salida
+            }
+
+            void loop () {
+                digitalWrite (LED, HIGH); // Prendemos el led
+                delay (1000); // Esperamos 1 segundo
+                digitalWrite (LED, LOW); // Apagamos el led
+                delay (500); // Esperamos 1/2 segundo
+            }
+        </p>
+        Para subir codigo, seleccionamos la pestaña de la barra superior "Seleccionar Placa y Puerto", en "Buscar placa" escribimos "ESP32-WROOM-DA-Module" en puertos, hacemos clic en el que termine con "(USB)", le damos en aceptar y subimos el código con el boton de "Cargar", ubicada en la misma barra de acciones.
+        <!-- Insertar imagen -->
+         Nota: En caso de que no aparezca el puerto USB, será necesario instalar un driver adicional a la computadora. El nombre del driver es "Silicon labs CP210x USB to UART Bridge".
+    </p>
+
+    <h3> Conectando el ESP32 al internet </h3>
+    <p>
+        Una forma sencilla de conectar nuestra placa a internet es a travéz de librería, en este caso usaremos la librería de WiFi.h, la librería la podemos descargar desde github, el primer resultado que salga, para incluirla, nos vamos a la pestaña de "Scketch > Incluir biblioteca > Añadir biblioteca .ZIP" y seleccionar la carpeta que acabamos de descargar.
+        <!-- Insertar imagen -->
+        Ahora bien, el código sería de la siuiente manera:
+
+        <p>
+            # include &lt;WiFi.h&gt; // Incluimos el uso de la librería en nuestro codigo
+            WiFiServer server(80); // Habilitamos el puerto 
+
+            const *char SSID = "NOM" // Reemplazamos "NOM" por el nombre de nuestra red WiFi
+            const *char PASSWORD = "CONT" // Reemplazamos "CONT" por la contraseña de nuestra red WiFi
+
+            void setup () {
+                Serial.begin (9600); // Habilitamos la comunicación serial
+                WiFi.begin (SSID, PASSWORD); // Nos conectamos a la red WiFi
+                
+                Serial.println (); // Salto de linea 
+
+                Serial.print ("Estableciondo conexión con: "); 
+                Serial.print (SSID);
+
+                while (WiFi.status() != WL_CONNECTED) {
+                delay(500);
+                Serial.printlnv ("CONECTANDO A RED WIFI...");
+                }
+
+                Serial.println ("CONEXION EXITOSA");
+                Serial.println ();
+
+                Serial.print ("IP ADRESS:   ");
+                Serial.println (WiFi.localIP()); // Dirección IP que toma la placa en la red
+                
+                server.begin ();
+            }
+
+            void loop () {
+                WiFiClient client = server.available();
+                if (client) {
+                    Serial.println("CLIENTE CONECTADO");
+                    delay (10);
+                    client.stop ();
+                }
+            }
+        </p>
+        De esta manera ya tenemos conectado la placa a internet, pero... ¿Como podemos empezar a monitorear nuestros dispositivos?.
+        Si bien, existen una gran cantidad de librerias que nos permiten realizar estos trabajos, haremos este trabajo desde cero con HTML. 
+    </p>    
 </body>
 </html>
