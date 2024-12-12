@@ -208,3 +208,21 @@ body {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
+/* Barra inferior igual a la de navegación */
+.FOOTER {
+    background-color: #333;  /* Fondo oscuro */
+    color: white;  /* Texto blanco */
+    text-align: center;  /* Centra el texto */
+    padding: 15px 0;  /* Espaciado arriba y abajo */
+    position: relative;  /* Establece la posición relativa */
+    width: 100%;  /* Ocupa todo el ancho de la página */
+    font-size: 14px;  /* Tamaño del texto */
+    margin-top: 30px;  /* Espacio para separar del contenido */
+    box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño */
+}
+
+.FOOTER p {
+    margin: 0;  /* Quita márgenes adicionales */
+}
+
