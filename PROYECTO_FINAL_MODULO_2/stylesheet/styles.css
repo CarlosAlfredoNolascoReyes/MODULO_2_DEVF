@@ -65,21 +65,20 @@ body {
 
 /* Estilo del ícono flotante */
 .ICON_FIXED {
-    position: fixed; /* Lo mantiene fijo en la pantalla */
-    bottom: 20px; /* A 20px desde la parte inferior */
-    right: 20px;  /* A 20px desde la parte derecha */
-    width: 60px;  /* Tamaño del ícono circular */
-    height: 60px; /* Tamaño del ícono circular */
-    background-color: #8becbc
-
-; /* Fondo del ícono flotante */
-    border-radius: 50%;  /* Hacer el ícono redondo */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #8becbc; /* Eliminar punto y coma extra */
+    border-radius: 50%;
     display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center;     /* Centrado vertical */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
 }
+
 
 /* Estilo del ícono dentro del círculo */
 .ICON_BUTT {
@@ -90,17 +89,18 @@ body {
 /* Estilo del encabezado */
 .CONTENT_HEADER {
     font-family: 'Pacifico', cursive;
-    background-color: #8becbc; /* Color de fondo (puedes cambiarlo por cualquier color que prefieras) */
-    padding: 14px;   /* Reduce el espaciado interno */
-    text-align: center; /* Centra el texto dentro del header */
-    font-size: 16px;  /* Tamaño de la fuente más pequeño */
-    font-weight: bold; /* Hace el texto en negritas */
-    color: rgb(0, 0, 0);  /* Color del texto */
-    position: sticky; /* Hace que el header se quede fijo al hacer scroll */
-    top: 0; /* Se queda fijo en la parte superior */
-    z-index: 50; /* Asegura que esté por encima de otros elementos */
-    min-height: 20px;  /* Reduce la altura mínima del header */
+    background-color: #8becbc;
+    padding: 14px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    min-height: 20px;
 }
+
 
 /* Estilo del contenedor del código */
 .CODE_CONTAINER {
@@ -124,7 +124,7 @@ body {
     border: none; /* Elimina el borde */
     border-radius: 10px; /* Bordes redondeados opcionales */
     background: #2e374b; /* Fondo oscuro */
-    padding: 0rem 0rem 0rem 0rem; /* Ajusta padding */
+    padding: 0; /* Ajusta padding */
     margin: 2rem auto;
 }
 
@@ -149,13 +149,13 @@ body {
 }
 
 .TEXT {
-    padding-left: 6em;
-    padding-right: 6em;
-    text-align: justify; 
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
     font-family: 'Pacifico', cursive;
-    color: #000000; /* Color del texto */
-    font-size: 18px; 
-} 
+    color: #000000;
+    font-size: 18px;
+}
 
 .IMAGE_CONTAINER {
     margin-top: 40px; /* Ajusta el espacio superior según el tamaño de tu barra */
@@ -179,14 +179,15 @@ body {
     background-color: #8becbc;
     border-radius: 10px;
     max-width: 300px;
-    width: 100%; /* Asegura que la tarjeta ocupe todo el ancho disponible */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Evita desbordamiento del contenido */
+    overflow: hidden;
     display: flex;
-    flex-direction: column; /* Asegura que la imagen y el texto se apilen verticalmente */
-    align-items: stretch; /* Ajusta el contenido al tamaño del contenedor */
-    border: 2px solid #000000; /* Cambia el color del borde aquí (puedes usar el color que desees) */
+    flex-direction: column;
+    align-items: stretch;
+    border: 2px solid #000000;
 }
+
 
 .MICROCONTROLER_CARD img {
     width: 100%; /* Ajusta el ancho de la imagen al contenedor */
