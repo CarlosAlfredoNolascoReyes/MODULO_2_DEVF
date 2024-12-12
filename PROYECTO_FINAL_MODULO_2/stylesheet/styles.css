@@ -1,0 +1,158 @@
+/* Restablecer márgenes en el body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 0px; /* Da espacio a la parte superior para la barra */
+}
+
+/* Estilo del link */
+.HEAD_LINK {
+    text-decoration: none;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del ícono */
+.ICON_HEAD {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilo del texto */
+.HEAD_STYLE {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    text-align: center; /* Centrado del texto */
+}
+
+/* Estilo de la barra de navegación */
+.HEAD {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #18738f;
+    width: 100%;
+    padding: 0 50px;
+    /* Elimina position: fixed para que la barra se desplace con la página */
+}
+
+/* Estilo de los enlaces de la barra de navegación */
+.NAVBAR {
+    display: flex;
+    margin-right: 100px;
+    font-family: 'Great Vibes', cursive;
+}
+.NAVAR_STYLE {
+    font-weight: bold; /* Hace el texto en negritas */
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    text-align: end; /* Centrado del texto */
+}
+.NAVBAR a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: 80px; /* Espaciado entre los enlaces */
+}
+
+/* Estilo del ícono flotante */
+.ICON_FIXED {
+    position: fixed; /* Lo mantiene fijo en la pantalla */
+    bottom: 20px; /* A 20px desde la parte inferior */
+    right: 20px;  /* A 20px desde la parte derecha */
+    width: 60px;  /* Tamaño del ícono circular */
+    height: 60px; /* Tamaño del ícono circular */
+    background-color: #18738f; /* Fondo del ícono flotante */
+    border-radius: 50%;  /* Hacer el ícono redondo */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo del ícono dentro del círculo */
+.ICON_BUTT {
+    width: 30px;  /* Tamaño del ícono */
+    height: 30px; /* Tamaño del ícono */
+}
+
+/* Estilo del encabezado */
+.CONTENT_HEADER {
+    font-family: 'Great Vibes', cursive;
+    background-color: #18738f; /* Color de fondo (puedes cambiarlo por cualquier color que prefieras) */
+    padding: 14px;   /* Reduce el espaciado interno */
+    text-align: center; /* Centra el texto dentro del header */
+    font-size: 16px;  /* Tamaño de la fuente más pequeño */
+    font-weight: bold; /* Hace el texto en negritas */
+    color: white;  /* Color del texto */
+    position: sticky; /* Hace que el header se quede fijo al hacer scroll */
+    top: 0; /* Se queda fijo en la parte superior */
+    z-index: 50; /* Asegura que esté por encima de otros elementos */
+    min-height: 20px;  /* Reduce la altura mínima del header */
+}
+
+/* Estilo del contenedor del código */
+.CODE_CONTAINER {
+    position: relative;
+    border: 2px solid #ccc; /* Borde del contenedor */
+    border-radius: 10px;
+    background: #2e3440; /* Fondo oscuro */
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow: auto; /* Permitir desplazamiento si es necesario */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo del bloque de código */
+.CODE_CONTAINER {
+    display: block;
+    width: 50%; /* Ajusta el ancho adaptativo */
+    max-width: 1000px; /* Ancho máximo */
+    max-height: 400px; /* Altura máxima */
+    overflow: auto; /* Permitir desplazamiento */
+    border: none; /* Elimina el borde */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    background: #2e374b; /* Fondo oscuro */
+    padding: 0rem 0rem 0rem 0rem; /* Ajusta padding */
+    margin: 2rem auto;
+}
+
+/* Estilo del botón de copiar */
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #2e374b; /* Fondo del botón */
+    color: #a8badf; /* Color del texto */
+    border: none;
+    padding: 5px 5px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.copy-btn:hover {
+    background: #88c0d0; /* Fondo al pasar el cursor */
+    color: #2e3440; /* Texto más oscuro */
+}
+
+
+
+
+
+
